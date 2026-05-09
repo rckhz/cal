@@ -139,7 +139,7 @@
         <button type="button" onclick="clicarNumero('4')">4</button>
         <button type="button" onclick="clicarNumero('5')">5</button>
         <button type="button" onclick="clicarNumero('6')">6</button>
-        <button type="button" class="operator" onclick="clicarOperador('-')">&#x2212;</button>
+        <button type="button" class="operator" onclick="clicarOperador('    -')">&#x2212;</button>
 
         <!-- Linha 5 -->
         <button type="button" onclick="clicarNumero('1')">1</button>
@@ -219,29 +219,57 @@
         atualizarHistory();
     }
 
-    function clicarOperador(op) {
-        if (numero1 === '') return;
-        operador = op;
-        const simbolos = { '+': '+', '-': '−', '*': '×', '/': '÷' };
-        operadorDisplay = simbolos[op] || op;
-        digitandoSegundo = true;
-        resultadoAtual = false;
-        atualizarDisplay(numero1);
-        atualizarHistory();
-    }
+              async function clicarOperador(op) {
+                if (numero1 === '') return;
 
-    function clicarIgual() {
-        if (numero1 === '' || numero2 === '' || operador === '') return;
+                if (digitandoSegundo && numero2 !== '') {
+                    const formData = new FormData();
+                    formData.append('numero1', numero1);
+                    formData.append('numero2', numero2);
+                    formData.append('operador', operador);
 
-        historyEl.innerText = numero1 + ' ' + operadorDisplay + ' ' + numero2 + ' =';
+                    const response = await fetch('/Calculadora/Calcular', {
+                        method: 'POST',
+                        body: formData
+                    });
 
-        // pega oq o usuario digitou
-        document.getElementById('campo-numero1').value = numero1;
-        document.getElementById('campo-numero2').value = numero2;
-        document.getElementById('campo-operador').value = operador;
-        //envia o formulario para o servidor
-        document.getElementById('form-calculadora').submit();
-    }
+                    const resultado = await response.json();
+                    numero1 = String(resultado);
+                    numero2 = '';
+                    atualizarDisplay(numero1);
+                }
+
+                operador = op;
+                const simbolos = { '+': '+', '-': '−', '*': '×', '/': '÷' };
+                operadorDisplay = simbolos[op] || op;
+                digitandoSegundo = true;
+                resultadoAtual = false;
+                numero2 = '';
+                atualizarHistory();
+            }
+
+            async function clicarIgual() {
+                if (numero1 === '' || numero2 === '' || operador === '') return;
+
+                const formData = new FormData();
+                formData.append('numero1', numero1);
+                formData.append('numero2', numero2);
+                formData.append('operador', operador);
+
+                const response = await fetch('/Calculadora/Calcular', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const resultado = await response.json();
+                historyEl.innerText = numero1 + ' ' + operadorDisplay + ' ' + numero2 + ' =';
+                numero1 = String(resultado);
+                numero2 = '';
+                operador = '';
+                digitandoSegundo = false;
+                resultadoAtual = true;
+                atualizarDisplay(numero1);
+            }
 
     function clicarC() {
         numero1 = ''; numero2 = ''; operador = ''; operadorDisplay = '';

@@ -12,16 +12,19 @@ namespace calculadora.Controllers
             return View(new CalculadoraModel());
         }
 
-        // diz que a acao so rodaa quando o usuario clicar no botao de calcular
+
         [HttpPost]
-        public IActionResult Calcular(CalculadoraModel model)
+        public IActionResult Calcular(double numero1, double numero2, string operador)
         {
-            //chama o metodo model que vc escreveu - aqui comeca a conta
-            //manda pro model calcular
+            var model = new CalculadoraModel
+            {
+                Numero1 = numero1,
+                Numero2 = numero2,
+                Operador = operador.Trim()  // remove espaços
+            };
             model.Calcular();
-            //devolve pro usuario o resultado daa conta
-            return View("Index", model);
-        }
+            return Json(model.Resultado);
+        }   
 
         [HttpPost]
         //recebe os dados que o usuario digito na tela - numero1, numero2 e operador

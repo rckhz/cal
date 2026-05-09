@@ -5,6 +5,7 @@ namespace WinFormsApp
     {
         private CalculadoraModel _model = new CalculadoraModel();
         private bool _digitandoSegundo = false;
+        private bool _acabouDeCalcular = false;
         public Form1()
         {
             InitializeComponent();
@@ -15,6 +16,11 @@ namespace WinFormsApp
         //btn numeros somente (0 - 9)
         private void btn1_Click(object sender, EventArgs e)
         {
+            if (_acabouDeCalcular)
+            {
+                txtDisplay.Text = "";
+                _acabouDeCalcular = false;
+            }
             txtDisplay.Text += "1";
         }
 
@@ -66,7 +72,25 @@ namespace WinFormsApp
         //btn operadores
         private void btnSoma_Click(object sender, EventArgs e)
         {
+            
+            //verifica se o segundo numero ja foi digitado
+            if (_digitandoSegundo && txtDisplay.Text != "")
+            {
+               //ja calcula o resultado da operacao anterior
+                _model.Numero2 = double.Parse(txtDisplay.Text);
+                _model.Calcular();
+                txtDisplay.Text = _model.Resultado.ToString();
+            }
+            
+            //caso o display esteja vazio impede o usuario de colocar sinais de operadores
+            if (txtDisplay.Text == "") 
+            {
+                return;
+            }
+            
+            //guarda o primeiro numero e o operador
             _model.Numero1 = double.Parse(txtDisplay.Text);
+           //define o operador, limpa o his torico e o display para digitar o proximo numero
             _model.Operador = "+";
             _digitandoSegundo = true;
             lblHistorico.Text = _model.Numero1 + " +";
@@ -75,7 +99,23 @@ namespace WinFormsApp
 
         private void btnSubtracao_Click(object sender, EventArgs e)
         {
+            //verifica se o segundo numero ja foi digitado
+            if (_digitandoSegundo && txtDisplay.Text != "")
+            {
+                //ja calcula o resultado da operacao anterior
+                _model.Numero2 = double.Parse(txtDisplay.Text);
+                _model.Calcular();
+                txtDisplay.Text = _model.Resultado.ToString();
+            }
+
+            //caso o display esteja vazio impede o usuario de colocar sinais de operadores
+            if (txtDisplay.Text == "")
+            {
+                return;
+            }
+            //guarda o primeiro numero e o operador
             _model.Numero1 = double.Parse(txtDisplay.Text);
+            //define o operador, limpa o his torico e o display para digitar o proximo numero
             _model.Operador = "-";
             _digitandoSegundo = true;
             lblHistorico.Text = _model.Numero1 + " -";
@@ -84,29 +124,78 @@ namespace WinFormsApp
 
         private void btnMultiplicacao_Click(object sender, EventArgs e)
         {
+            //verifica se o segundo numero ja foi digitado
+            if (_digitandoSegundo && txtDisplay.Text != "")
+            {
+                //ja calcula o resultado da operacao anterior
+                _model.Numero2 = double.Parse(txtDisplay.Text);
+                _model.Calcular();
+                txtDisplay.Text = _model.Resultado.ToString();
+            }
+
+            //caso o display esteja vazio impede o usuario de colocar sinais de operadores
+            if (txtDisplay.Text == "")
+            {
+                return;
+            }
+            //guarda o primeiro numero e o operador
             _model.Numero1 = double.Parse(txtDisplay.Text);
+            //define o operador, limpa o his torico e o display para digitar o proximo numero
             _model.Operador = "*";
             _digitandoSegundo = true;
-            lblHistorico.Text = _model.Numero1 + " x";
+            lblHistorico.Text = _model.Numero1 + " *";
             txtDisplay.Text = "";
         }
 
         private void btnDivisao_Click(object sender, EventArgs e)
         {
+            //verifica se o segundo numero ja foi digitado  
+            if (_digitandoSegundo && txtDisplay.Text != "")
+            {
+                //ja calcula o resultado da operacao anterior
+                _model.Numero2 = double.Parse(txtDisplay.Text);
+                _model.Calcular();
+                txtDisplay.Text = _model.Resultado.ToString();
+            }
+
+            //caso o display esteja vazio impede o usuario de colocar sinais de operadores
+            if (txtDisplay.Text == "")
+            {
+                return;
+            }
+            //guarda o primeiro numero e o operador
             _model.Numero1 = double.Parse(txtDisplay.Text);
+            //define o operador, limpa o his torico e o display para digitar o proximo numero
             _model.Operador = "/";
             _digitandoSegundo = true;
-            lblHistorico.Text = _model.Numero1 + " ÷";
+            lblHistorico.Text = _model.Numero1 + " /";
             txtDisplay.Text = "";
         }
         private void btnIgual_Click(object sender, EventArgs e)
         {
+            
+            //pega o segundo numero e guard daa no model
             _model.Numero2 = double.Parse(txtDisplay.Text);
+            
+            //exibe o historico da operacao
             lblHistorico.Text = _model.Numero1 + " " + _model.Operador + " " + _model.Numero2 + " =";
+            
+            //chama o model para fazer o calculo
             _model.Calcular();
+            
+            //mostra o resultado no disply
             txtDisplay.Text = _model.Resultado.ToString();
+            
+            //reseta o model ou seja o proximo numero vai ser o numero1 novamente
             _digitandoSegundo = false;
+            
+            //cria um model novo para os novos calculos
             _model = new CalculadoraModel();
+            
+            //marca que acabou de calcular e limpa o display todo
+            _acabouDeCalcular = true;
+            
+            //limpa o historico
             lblHistorico.Text = "";
 
         }
