@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="calculadora/calculadora.csproj" />
   <Project Path="clCalculadora/clCalculadora.csproj" Id="8a0206d2-a990-4073-ae97-fb9fab267ab8" />
+  <Project Path="WinFormsApp/WinFormsApp.csproj" Id="fe831894-f9b3-4b08-84d6-18e96170b553" />
 </Solution>
