@@ -1,0 +1,14 @@
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.csproj.AssemblyReference.cache
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.GeneratedMSBuildEditorConfig.editorconfig
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.AssemblyInfoInputs.cache
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.AssemblyInfo.cs
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.csproj.CoreCompileInputs.cache
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.MvcApplicationPartsAssemblyInfo.cache
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.RazorAssemblyInfo.cache
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.RazorAssemblyInfo.cs
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.sourcelink.json
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.dll
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\refint\mvcCalc.dll
+C:\saves\calculadora\calculadora\obj\Debug\net10.0\mvcCalc.pdb

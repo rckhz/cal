@@ -8,15 +8,15 @@
     ".NETCoreApp,Version=v10.0": {
       "wfCalc/1.0.0": {
         "dependencies": {
-          "clCalc": "1.0.0"
+          "clCalculadora": "1.0.0"
         },
         "runtime": {
           "wfCalc.dll": {}
         }
       },
-      "clCalc/1.0.0": {
+      "clCalculadora/1.0.0": {
         "runtime": {
-          "clCalc.dll": {
+          "clCalculadora.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -30,7 +30,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "clCalc/1.0.0": {
+    "clCalculadora/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -9,8 +9,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = calculadora
-build_property.RootNamespace = calculadora
+build_property.RootNamespace = Calculadora
+build_property.RootNamespace = Calculadora
 build_property.ProjectDir = C:\saves\calculadora\calculadora\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
@@ -52,4 +52,4 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/saves/calculadora/calculadora/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-otcjt41lle
+build_metadata.AdditionalFiles.CssScope = b-hz8u7nauxx

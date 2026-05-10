@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="calculadora/mvcCalc.csproj" />
-  <Project Path="clCalculadora/clCalc.csproj" Id="8a0206d2-a990-4073-ae97-fb9fab267ab8" />
+  <Project Path="calculadora/Calculadora.csproj" />
+  <Project Path="clCalculadora/clCalculadora.csproj" Id="8a0206d2-a990-4073-ae97-fb9fab267ab8" />
   <Project Path="mobCalc/mobCalc.csproj" Id="e547af1f-0076-4ef5-a54f-d21f9c858b2f">
     <Deploy Solution="Debug|*" />
   </Project>

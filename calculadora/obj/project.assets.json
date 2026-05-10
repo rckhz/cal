@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "clCalc/1.0.0": {
+      "clCalculadora/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "compile": {
-          "bin/placeholder/clCalc.dll": {}
+          "bin/placeholder/clCalculadora.dll": {}
         },
         "runtime": {
-          "bin/placeholder/clCalc.dll": {}
+          "bin/placeholder/clCalculadora.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "clCalc/1.0.0": {
+    "clCalculadora/1.0.0": {
       "type": "project",
-      "path": "../clCalculadora/clCalc.csproj",
-      "msbuildProject": "../clCalculadora/clCalc.csproj"
+      "path": "../clCalculadora/clCalculadora.csproj",
+      "msbuildProject": "../clCalculadora/clCalculadora.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "clCalc >= 1.0.0"
+      "clCalculadora >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\saves\\calculadora\\calculadora\\mvcCalc.csproj",
-      "projectName": "mvcCalc",
-      "projectPath": "C:\\saves\\calculadora\\calculadora\\mvcCalc.csproj",
+      "projectUniqueName": "C:\\saves\\calculadora\\calculadora\\Calculadora.csproj",
+      "projectName": "Calculadora",
+      "projectPath": "C:\\saves\\calculadora\\calculadora\\Calculadora.csproj",
       "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
       "outputPath": "C:\\saves\\calculadora\\calculadora\\obj\\",
       "projectStyle": "PackageReference",
@@ -60,8 +60,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\saves\\calculadora\\clCalculadora\\clCalc.csproj": {
-              "projectPath": "C:\\saves\\calculadora\\clCalculadora\\clCalc.csproj"
+            "C:\\saves\\calculadora\\clCalculadora\\clCalculadora.csproj": {
+              "projectPath": "C:\\saves\\calculadora\\clCalculadora\\clCalculadora.csproj"
             }
           }
         }

@@ -3,8 +3,6 @@ C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\wfCalc.deps.json
 C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\wfCalc.runtimeconfig.json
 C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\wfCalc.dll
 C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\wfCalc.pdb
-C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\clCalc.dll
-C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\clCalc.pdb
 C:\saves\calculadora\WinFormsApp\obj\Debug\net10.0-windows\wfCalc.csproj.AssemblyReference.cache
 C:\saves\calculadora\WinFormsApp\obj\Debug\net10.0-windows\WinFormsApp.Form1.resources
 C:\saves\calculadora\WinFormsApp\obj\Debug\net10.0-windows\wfCalc.csproj.GenerateResource.cache
@@ -19,3 +17,5 @@ C:\saves\calculadora\WinFormsApp\obj\Debug\net10.0-windows\refint\wfCalc.dll
 C:\saves\calculadora\WinFormsApp\obj\Debug\net10.0-windows\wfCalc.pdb
 C:\saves\calculadora\WinFormsApp\obj\Debug\net10.0-windows\wfCalc.genruntimeconfig.cache
 C:\saves\calculadora\WinFormsApp\obj\Debug\net10.0-windows\ref\wfCalc.dll
+C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\clCalculadora.dll
+C:\saves\calculadora\WinFormsApp\bin\Debug\net10.0-windows\clCalculadora.pdb
