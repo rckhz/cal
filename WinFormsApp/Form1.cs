@@ -13,54 +13,8 @@ namespace WinFormsApp
             this.MaximizeBox = false;
             this.MinimumSize = this.Size;
             this.MaximumSize = this.Size;
-
-            // Fundo geral
-            this.BackColor = ColorTranslator.FromHtml("#2D2D2D");
-
-            // Display
-            txtDisplay.BackColor = ColorTranslator.FromHtml("#4A4A4A");
-            txtDisplay.ForeColor = Color.White;
-            txtDisplay.BorderStyle = BorderStyle.None;
-
-            // Historico
-            lblHistorico.BackColor = ColorTranslator.FromHtml("#4A4A4A");
-            lblHistorico.ForeColor = Color.White;
-
-            // Cores
-            Color corNumeros = ColorTranslator.FromHtml("#3D3D3D");
-            Color corEspeciais = ColorTranslator.FromHtml("#454545");
-            Color corOperadores = ColorTranslator.FromHtml("#D07A20");
-            Color corIgual = ColorTranslator.FromHtml("#4A90D9");
-            Color corTexto = Color.White;
-
-            // Números
-            btn0.BackColor = btn1.BackColor = btn2.BackColor = btn3.BackColor =
-            btn4.BackColor = btn5.BackColor = btn6.BackColor = btn7.BackColor =
-            btn8.BackColor = btn9.BackColor = corNumeros;
-
-            // Especiais
-            btnPorcentagem.BackColor = btnCE.BackColor = btnC.BackColor =
-            btnDelete.BackColor = btnFracao.BackColor = btnQuadrado.BackColor =
-            btnRaiz.BackColor = btnInversao.BackColor = btnPonto.BackColor = corEspeciais;
-
-            // Operadores
-            btnSoma.BackColor = btnSubtracao.BackColor =
-            btnMultiplicacao.BackColor = btnDivisao.BackColor = corOperadores;
-
-            // Igual
-            btnIgual.BackColor = corIgual;
-
-            // Texto branco em todos os botões
-            foreach (Control c in this.Controls)
-            {
-                if (c is Button b)
-                {
-                    b.ForeColor = corTexto;
-                    b.FlatStyle = FlatStyle.Flat;
-                    b.FlatAppearance.BorderSize = 0;
-                }
-            }
         }
+
         private void txtDisplay_TextChanged(object sender, EventArgs e)
         {
         }
@@ -123,25 +77,25 @@ namespace WinFormsApp
         //btn operadores
         private void btnSoma_Click(object sender, EventArgs e)
         {
-            
+
             //verifica se o segundo numero ja foi digitado
             if (_digitandoSegundo && txtDisplay.Text != "")
             {
-               //ja calcula o resultado da operacao anterior
+                //ja calcula o resultado da operacao anterior
                 _model.Numero2 = double.Parse(txtDisplay.Text);
                 _model.Calcular();
                 txtDisplay.Text = _model.Resultado.ToString();
             }
-            
+
             //caso o display esteja vazio impede o usuario de colocar sinais de operadores
-            if (txtDisplay.Text == "") 
+            if (txtDisplay.Text == "")
             {
                 return;
             }
-            
+
             //guarda o primeiro numero e o operador
             _model.Numero1 = double.Parse(txtDisplay.Text);
-           //define o operador, limpa o his torico e o display para digitar o proximo numero
+            //define o operador, limpa o his torico e o display para digitar o proximo numero
             _model.Operador = "+";
             _digitandoSegundo = true;
             lblHistorico.Text = _model.Numero1 + " +";
@@ -224,28 +178,28 @@ namespace WinFormsApp
         }
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            
+
             //pega o segundo numero e guard daa no model
             _model.Numero2 = double.Parse(txtDisplay.Text);
-            
+
             //exibe o historico da operacao
             lblHistorico.Text = _model.Numero1 + " " + _model.Operador + " " + _model.Numero2 + " =";
-            
+
             //chama o model para fazer o calculo
             _model.Calcular();
-            
+
             //mostra o resultado no disply
             txtDisplay.Text = _model.Resultado.ToString();
-            
+
             //reseta o model ou seja o proximo numero vai ser o numero1 novamente
             _digitandoSegundo = false;
-            
+
             //cria um model novo para os novos calculos
             _model = new CalculadoraModel();
-            
+
             //marca que acabou de calcular e limpa o display todo
             _acabouDeCalcular = true;
-            
+
             //limpa o historico
             lblHistorico.Text = "";
 
@@ -335,7 +289,56 @@ namespace WinFormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.BackColor = Color.FromArgb(45, 45, 45);
 
+            txtDisplay.BackColor = Color.FromArgb(45, 45, 45);
+            txtDisplay.ForeColor = Color.White;
+            txtDisplay.BorderStyle = BorderStyle.None;
+            txtDisplay.Font = new Font("Segoe UI", 18, FontStyle.Regular);
+            txtDisplay.TextAlign = HorizontalAlignment.Right;
+            txtDisplay.Size = new Size(this.ClientSize.Width - 20, 35);
+            txtDisplay.Location = new Point(0, 25);
+
+            lblHistorico.BackColor = Color.FromArgb(45, 45, 45);
+            lblHistorico.ForeColor = Color.FromArgb(150, 150, 150);
+            lblHistorico.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            lblHistorico.TextAlign = ContentAlignment.MiddleRight;
+            lblHistorico.Size = new Size(this.ClientSize.Width - 20, 20);
+            lblHistorico.Location = new Point(10, 5);
+
+            Label separador = new Label();
+            separador.BackColor = Color.FromArgb(70, 70, 70);
+            separador.Size = new Size(this.ClientSize.Width, 1);
+            separador.Location = new Point(0, 58);
+            this.Controls.Add(separador);
+
+            Color corNumeros = Color.FromArgb(55, 55, 55);
+            Color corEspeciais = Color.FromArgb(60, 60, 60);
+            Color corOperadores = ColorTranslator.FromHtml("#D07A20");
+            Color corIgual = ColorTranslator.FromHtml("#4A90D9");
+
+            btn0.BackColor = btn1.BackColor = btn2.BackColor = btn3.BackColor =
+            btn4.BackColor = btn5.BackColor = btn6.BackColor = btn7.BackColor =
+            btn8.BackColor = btn9.BackColor = btnPonto.BackColor = btnInversao.BackColor = corNumeros;
+
+            btnPorcentagem.BackColor = btnCE.BackColor = btnC.BackColor =
+            btnDelete.BackColor = btnFracao.BackColor = btnQuadrado.BackColor =
+            btnRaiz.BackColor = corEspeciais;
+
+            btnSoma.BackColor = btnSubtracao.BackColor =
+            btnMultiplicacao.BackColor = btnDivisao.BackColor = corOperadores;
+
+            btnIgual.BackColor = corIgual;
+
+            foreach (Control c in this.Controls)
+            {
+                if (c is BotaoArredondado b)
+                {
+                    b.ForeColor = Color.White;
+                    b.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+                    b.Cursor = Cursors.Hand;
+                }
+            }
         }
     }
 }

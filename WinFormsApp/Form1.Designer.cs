@@ -2,311 +2,87 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             txtDisplay = new TextBox();
-            btnPorcentagem = new Button();
-            btnCE = new Button();
-            btnDelete = new Button();
-            btnDivisao = new Button();
-            btnRaiz = new Button();
-            btnQuadrado = new Button();
-            btnFracao = new Button();
-            btnMultiplicacao = new Button();
-            btn3 = new Button();
-            btn2 = new Button();
-            btn1 = new Button();
-            btnSubtracao = new Button();
-            btn6 = new Button();
-            btn5 = new Button();
-            btn4 = new Button();
-            btnSoma = new Button();
-            btn9 = new Button();
-            btn8 = new Button();
-            btn7 = new Button();
-            btnIgual = new Button();
-            btnPonto = new Button();
-            btn0 = new Button();
-            btnInversao = new Button();
-            btnC = new Button();
+            btnPorcentagem = new BotaoArredondado();
+            btnCE = new BotaoArredondado();
+            btnDelete = new BotaoArredondado();
+            btnDivisao = new BotaoArredondado();
+            btnRaiz = new BotaoArredondado();
+            btnQuadrado = new BotaoArredondado();
+            btnFracao = new BotaoArredondado();
+            btnMultiplicacao = new BotaoArredondado();
+            btn3 = new BotaoArredondado();
+            btn2 = new BotaoArredondado();
+            btn1 = new BotaoArredondado();
+            btnSubtracao = new BotaoArredondado();
+            btn6 = new BotaoArredondado();
+            btn5 = new BotaoArredondado();
+            btn4 = new BotaoArredondado();
+            btnSoma = new BotaoArredondado();
+            btn9 = new BotaoArredondado();
+            btn8 = new BotaoArredondado();
+            btn7 = new BotaoArredondado();
+            btnIgual = new BotaoArredondado();
+            btnPonto = new BotaoArredondado();
+            btn0 = new BotaoArredondado();
+            btnInversao = new BotaoArredondado();
+            btnC = new BotaoArredondado();
             lblHistorico = new Label();
             SuspendLayout();
-            // 
-            // txtDisplay
-            // 
-            txtDisplay.Location = new Point(2, 34);
+
+            txtDisplay.Location = new Point(12, 34);
             txtDisplay.Name = "txtDisplay";
             txtDisplay.ReadOnly = true;
-            txtDisplay.Size = new Size(238, 23);
+            txtDisplay.Size = new Size(218, 23);
             txtDisplay.TabIndex = 0;
             txtDisplay.TextChanged += txtDisplay_TextChanged;
-            // 
-            // btnPorcentagem
-            // 
-            btnPorcentagem.Location = new Point(2, 63);
-            btnPorcentagem.Name = "btnPorcentagem";
-            btnPorcentagem.Size = new Size(61, 42);
-            btnPorcentagem.TabIndex = 1;
-            btnPorcentagem.Text = "%";
-            btnPorcentagem.UseVisualStyleBackColor = true;
-            btnPorcentagem.Click += btnPorcentagem_Click;
-            // 
-            // btnCE
-            // 
-            btnCE.Location = new Point(61, 63);
-            btnCE.Name = "btnCE";
-            btnCE.Size = new Size(61, 42);
-            btnCE.TabIndex = 2;
-            btnCE.Text = "CE";
-            btnCE.UseVisualStyleBackColor = true;
-            btnCE.Click += btnCE_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(179, 63);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(61, 42);
-            btnDelete.TabIndex = 4;
-            btnDelete.Text = "⌫";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
-            // 
-            // btnDivisao
-            // 
-            btnDivisao.Location = new Point(179, 102);
-            btnDivisao.Name = "btnDivisao";
-            btnDivisao.Size = new Size(61, 42);
-            btnDivisao.TabIndex = 8;
-            btnDivisao.Text = "÷";
-            btnDivisao.UseVisualStyleBackColor = true;
-            btnDivisao.Click += btnDivisao_Click;
-            // 
-            // btnRaiz
-            // 
-            btnRaiz.Location = new Point(119, 102);
-            btnRaiz.Name = "btnRaiz";
-            btnRaiz.Size = new Size(61, 42);
-            btnRaiz.TabIndex = 7;
-            btnRaiz.Text = "²√x";
-            btnRaiz.UseVisualStyleBackColor = true;
-            btnRaiz.Click += btnRaiz_Click;
-            // 
-            // btnQuadrado
-            // 
-            btnQuadrado.Location = new Point(61, 102);
-            btnQuadrado.Name = "btnQuadrado";
-            btnQuadrado.Size = new Size(61, 42);
-            btnQuadrado.TabIndex = 6;
-            btnQuadrado.Text = "x²";
-            btnQuadrado.UseVisualStyleBackColor = true;
-            btnQuadrado.Click += btnQuadrado_Click;
-            // 
-            // btnFracao
-            // 
-            btnFracao.Location = new Point(2, 102);
-            btnFracao.Name = "btnFracao";
-            btnFracao.Size = new Size(61, 42);
-            btnFracao.TabIndex = 5;
-            btnFracao.Text = "½ ";
-            btnFracao.UseVisualStyleBackColor = true;
-            btnFracao.Click += btnFracao_Click;
-            // 
-            // btnMultiplicacao
-            // 
-            btnMultiplicacao.Location = new Point(179, 141);
-            btnMultiplicacao.Name = "btnMultiplicacao";
-            btnMultiplicacao.Size = new Size(61, 42);
-            btnMultiplicacao.TabIndex = 12;
-            btnMultiplicacao.Text = "x";
-            btnMultiplicacao.UseVisualStyleBackColor = true;
-            btnMultiplicacao.Click += btnMultiplicacao_Click;
-            // 
-            // btn3
-            // 
-            btn3.Location = new Point(119, 141);
-            btn3.Name = "btn3";
-            btn3.Size = new Size(61, 42);
-            btn3.TabIndex = 11;
-            btn3.Text = "3";
-            btn3.UseVisualStyleBackColor = true;
-            btn3.Click += btn3_Click;
-            // 
-            // btn2
-            // 
-            btn2.Location = new Point(61, 141);
-            btn2.Name = "btn2";
-            btn2.Size = new Size(61, 42);
-            btn2.TabIndex = 10;
-            btn2.Text = "2";
-            btn2.UseVisualStyleBackColor = true;
-            btn2.Click += btn2_Click;
-            // 
-            // btn1
-            // 
-            btn1.Location = new Point(2, 141);
-            btn1.Name = "btn1";
-            btn1.Size = new Size(61, 42);
-            btn1.TabIndex = 9;
-            btn1.Text = "1";
-            btn1.UseVisualStyleBackColor = true;
-            btn1.Click += btn1_Click;
-            // 
-            // btnSubtracao
-            // 
-            btnSubtracao.Location = new Point(179, 180);
-            btnSubtracao.Name = "btnSubtracao";
-            btnSubtracao.Size = new Size(61, 42);
-            btnSubtracao.TabIndex = 16;
-            btnSubtracao.Text = "-";
-            btnSubtracao.UseVisualStyleBackColor = true;
-            btnSubtracao.Click += btnSubtracao_Click;
-            // 
-            // btn6
-            // 
-            btn6.Location = new Point(119, 180);
-            btn6.Name = "btn6";
-            btn6.Size = new Size(61, 42);
-            btn6.TabIndex = 15;
-            btn6.Text = "6";
-            btn6.UseVisualStyleBackColor = true;
-            btn6.Click += btn6_Click;
-            // 
-            // btn5
-            // 
-            btn5.Location = new Point(61, 180);
-            btn5.Name = "btn5";
-            btn5.Size = new Size(61, 42);
-            btn5.TabIndex = 14;
-            btn5.Text = "5";
-            btn5.UseVisualStyleBackColor = true;
-            btn5.Click += btn5_Click;
-            // 
-            // btn4
-            // 
-            btn4.Location = new Point(2, 180);
-            btn4.Name = "btn4";
-            btn4.Size = new Size(61, 42);
-            btn4.TabIndex = 13;
-            btn4.Text = "4";
-            btn4.UseVisualStyleBackColor = true;
-            btn4.Click += btn4_Click;
-            // 
-            // btnSoma
-            // 
-            btnSoma.Location = new Point(179, 219);
-            btnSoma.Name = "btnSoma";
-            btnSoma.Size = new Size(61, 42);
-            btnSoma.TabIndex = 20;
-            btnSoma.Text = "+";
-            btnSoma.UseVisualStyleBackColor = true;
-            btnSoma.Click += btnSoma_Click;
-            // 
-            // btn9
-            // 
-            btn9.Location = new Point(119, 219);
-            btn9.Name = "btn9";
-            btn9.Size = new Size(61, 42);
-            btn9.TabIndex = 19;
-            btn9.Text = "9";
-            btn9.UseVisualStyleBackColor = true;
-            btn9.Click += btn9_Click;
-            // 
-            // btn8
-            // 
-            btn8.Location = new Point(61, 219);
-            btn8.Name = "btn8";
-            btn8.Size = new Size(61, 42);
-            btn8.TabIndex = 18;
-            btn8.Text = "8";
-            btn8.UseVisualStyleBackColor = true;
-            btn8.Click += btn8_Click;
-            // 
-            // btn7
-            // 
-            btn7.Location = new Point(2, 219);
-            btn7.Name = "btn7";
-            btn7.Size = new Size(61, 42);
-            btn7.TabIndex = 17;
-            btn7.Text = "7";
-            btn7.UseVisualStyleBackColor = true;
-            btn7.Click += btn7_Click;
-            // 
-            // btnIgual
-            // 
-            btnIgual.Location = new Point(179, 258);
-            btnIgual.Name = "btnIgual";
-            btnIgual.Size = new Size(61, 42);
-            btnIgual.TabIndex = 24;
-            btnIgual.Text = "=";
-            btnIgual.UseVisualStyleBackColor = true;
-            btnIgual.Click += btnIgual_Click;
-            // 
-            // btnPonto
-            // 
-            btnPonto.Location = new Point(119, 258);
-            btnPonto.Name = "btnPonto";
-            btnPonto.Size = new Size(61, 42);
-            btnPonto.TabIndex = 23;
-            btnPonto.Text = ".";
-            btnPonto.UseVisualStyleBackColor = true;
-            btnPonto.Click += btnPonto_Click;
-            // 
-            // btn0
-            // 
-            btn0.Location = new Point(61, 258);
-            btn0.Name = "btn0";
-            btn0.Size = new Size(61, 42);
-            btn0.TabIndex = 22;
-            btn0.Text = "0";
-            btn0.UseVisualStyleBackColor = true;
-            btn0.Click += btn0_Click;
-            // 
-            // btnInversao
-            // 
-            btnInversao.Location = new Point(2, 258);
-            btnInversao.Name = "btnInversao";
-            btnInversao.Size = new Size(61, 42);
-            btnInversao.TabIndex = 21;
-            btnInversao.Text = "+/-";
-            btnInversao.UseVisualStyleBackColor = true;
-            btnInversao.Click += btnInversao_Click;
-            // 
-            // btnC
-            // 
-            btnC.Location = new Point(119, 63);
-            btnC.Name = "btnC";
-            btnC.Size = new Size(61, 42);
-            btnC.TabIndex = 3;
-            btnC.Text = "C";
-            btnC.UseVisualStyleBackColor = true;
-            btnC.Click += btnC_Click;
-            // 
-            // lblHistorico
-            // 
+
+            // Row 1 - Y:63
+            btnPorcentagem.Location = new Point(3, 63); btnPorcentagem.Size = new Size(58, 39); btnPorcentagem.Text = "%"; btnPorcentagem.TabIndex = 1; btnPorcentagem.Click += btnPorcentagem_Click;
+            btnCE.Location = new Point(63, 63); btnCE.Size = new Size(58, 39); btnCE.Text = "CE"; btnCE.TabIndex = 2; btnCE.Click += btnCE_Click;
+            btnC.Location = new Point(123, 63); btnC.Size = new Size(58, 39); btnC.Text = "C"; btnC.TabIndex = 3; btnC.Click += btnC_Click;
+            btnDelete.Location = new Point(183, 63); btnDelete.Size = new Size(58, 39); btnDelete.Text = "⌫"; btnDelete.TabIndex = 4; btnDelete.Click += btnDelete_Click;
+
+            // Row 2 - Y:105
+            btnFracao.Location = new Point(3, 105); btnFracao.Size = new Size(58, 39); btnFracao.Text = "½"; btnFracao.TabIndex = 5; btnFracao.Click += btnFracao_Click;
+            btnQuadrado.Location = new Point(63, 105); btnQuadrado.Size = new Size(58, 39); btnQuadrado.Text = "x²"; btnQuadrado.TabIndex = 6; btnQuadrado.Click += btnQuadrado_Click;
+            btnRaiz.Location = new Point(123, 105); btnRaiz.Size = new Size(58, 39); btnRaiz.Text = "²√x"; btnRaiz.TabIndex = 7; btnRaiz.Click += btnRaiz_Click;
+            btnDivisao.Location = new Point(183, 105); btnDivisao.Size = new Size(58, 39); btnDivisao.Text = "÷"; btnDivisao.TabIndex = 8; btnDivisao.Click += btnDivisao_Click;
+
+            // Row 3 - Y:147
+            btn1.Location = new Point(3, 147); btn1.Size = new Size(58, 39); btn1.Text = "1"; btn1.TabIndex = 9; btn1.Click += btn1_Click;
+            btn2.Location = new Point(63, 147); btn2.Size = new Size(58, 39); btn2.Text = "2"; btn2.TabIndex = 10; btn2.Click += btn2_Click;
+            btn3.Location = new Point(123, 147); btn3.Size = new Size(58, 39); btn3.Text = "3"; btn3.TabIndex = 11; btn3.Click += btn3_Click;
+            btnMultiplicacao.Location = new Point(183, 147); btnMultiplicacao.Size = new Size(58, 39); btnMultiplicacao.Text = "x"; btnMultiplicacao.TabIndex = 12; btnMultiplicacao.Click += btnMultiplicacao_Click;
+
+            // Row 4 - Y:189
+            btn4.Location = new Point(3, 189); btn4.Size = new Size(58, 39); btn4.Text = "4"; btn4.TabIndex = 13; btn4.Click += btn4_Click;
+            btn5.Location = new Point(63, 189); btn5.Size = new Size(58, 39); btn5.Text = "5"; btn5.TabIndex = 14; btn5.Click += btn5_Click;
+            btn6.Location = new Point(123, 189); btn6.Size = new Size(58, 39); btn6.Text = "6"; btn6.TabIndex = 15; btn6.Click += btn6_Click;
+            btnSubtracao.Location = new Point(183, 189); btnSubtracao.Size = new Size(58, 39); btnSubtracao.Text = "-"; btnSubtracao.TabIndex = 16; btnSubtracao.Click += btnSubtracao_Click;
+
+            // Row 5 - Y:231
+            btn7.Location = new Point(3, 231); btn7.Size = new Size(58, 39); btn7.Text = "7"; btn7.TabIndex = 17; btn7.Click += btn7_Click;
+            btn8.Location = new Point(63, 231); btn8.Size = new Size(58, 39); btn8.Text = "8"; btn8.TabIndex = 18; btn8.Click += btn8_Click;
+            btn9.Location = new Point(123, 231); btn9.Size = new Size(58, 39); btn9.Text = "9"; btn9.TabIndex = 19; btn9.Click += btn9_Click;
+            btnSoma.Location = new Point(183, 231); btnSoma.Size = new Size(58, 39); btnSoma.Text = "+"; btnSoma.TabIndex = 20; btnSoma.Click += btnSoma_Click;
+
+            // Row 6 - Y:273
+            btnInversao.Location = new Point(3, 273); btnInversao.Size = new Size(58, 39); btnInversao.Text = "+/-"; btnInversao.TabIndex = 21; btnInversao.Click += btnInversao_Click;
+            btn0.Location = new Point(63, 273); btn0.Size = new Size(58, 39); btn0.Text = "0"; btn0.TabIndex = 22; btn0.Click += btn0_Click;
+            btnPonto.Location = new Point(123, 273); btnPonto.Size = new Size(58, 39); btnPonto.Text = "."; btnPonto.TabIndex = 23; btnPonto.Click += btnPonto_Click;
+            btnIgual.Location = new Point(183, 273); btnIgual.Size = new Size(58, 39); btnIgual.Text = "="; btnIgual.TabIndex = 24; btnIgual.Click += btnIgual_Click;
+
             lblHistorico.AutoSize = true;
             lblHistorico.Location = new Point(2, 9);
             lblHistorico.Name = "lblHistorico";
@@ -314,38 +90,17 @@
             lblHistorico.TabIndex = 25;
             lblHistorico.TextAlign = ContentAlignment.MiddleRight;
             lblHistorico.Click += lblHistorico_Click;
-            // 
-            // Form1
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
-            ClientSize = new Size(242, 302);
+            ClientSize = new Size(244, 318);
             Controls.Add(lblHistorico);
-            Controls.Add(btnIgual);
-            Controls.Add(btnPonto);
-            Controls.Add(btn0);
-            Controls.Add(btnInversao);
-            Controls.Add(btnSoma);
-            Controls.Add(btn9);
-            Controls.Add(btn8);
-            Controls.Add(btn7);
-            Controls.Add(btnSubtracao);
-            Controls.Add(btn6);
-            Controls.Add(btn5);
-            Controls.Add(btn4);
-            Controls.Add(btnMultiplicacao);
-            Controls.Add(btn3);
-            Controls.Add(btn2);
-            Controls.Add(btn1);
-            Controls.Add(btnDivisao);
-            Controls.Add(btnRaiz);
-            Controls.Add(btnQuadrado);
-            Controls.Add(btnFracao);
-            Controls.Add(btnDelete);
-            Controls.Add(btnC);
-            Controls.Add(btnCE);
-            Controls.Add(btnPorcentagem);
+            Controls.Add(btnIgual); Controls.Add(btnPonto); Controls.Add(btn0); Controls.Add(btnInversao);
+            Controls.Add(btnSoma); Controls.Add(btn9); Controls.Add(btn8); Controls.Add(btn7);
+            Controls.Add(btnSubtracao); Controls.Add(btn6); Controls.Add(btn5); Controls.Add(btn4);
+            Controls.Add(btnMultiplicacao); Controls.Add(btn3); Controls.Add(btn2); Controls.Add(btn1);
+            Controls.Add(btnDivisao); Controls.Add(btnRaiz); Controls.Add(btnQuadrado); Controls.Add(btnFracao);
+            Controls.Add(btnDelete); Controls.Add(btnC); Controls.Add(btnCE); Controls.Add(btnPorcentagem);
             Controls.Add(txtDisplay);
             Name = "Form1";
             Text = "Form1";
@@ -354,33 +109,31 @@
             PerformLayout();
         }
 
-        #endregion
-
         private TextBox txtDisplay;
-        private Button btnPorcentagem;
-        private Button btnCE;
-        private Button btnDelete;
-        private Button btnDivisao;
-        private Button btnRaiz;
-        private Button btnQuadrado;
-        private Button btnFracao;
-        private Button btnMultiplicacao;
-        private Button btn3;
-        private Button btn2;
-        private Button btn1;
-        private Button btnSubtracao;
-        private Button btn6;
-        private Button btn5;
-        private Button btn4;
-        private Button btnSoma;
-        private Button btn9;
-        private Button btn8;
-        private Button btn7;
-        private Button btnIgual;
-        private Button btnPonto;
-        private Button btn0;
-        private Button btnInversao;
-        private Button btnC;
+        private BotaoArredondado btnPorcentagem;
+        private BotaoArredondado btnCE;
+        private BotaoArredondado btnDelete;
+        private BotaoArredondado btnDivisao;
+        private BotaoArredondado btnRaiz;
+        private BotaoArredondado btnQuadrado;
+        private BotaoArredondado btnFracao;
+        private BotaoArredondado btnMultiplicacao;
+        private BotaoArredondado btn3;
+        private BotaoArredondado btn2;
+        private BotaoArredondado btn1;
+        private BotaoArredondado btnSubtracao;
+        private BotaoArredondado btn6;
+        private BotaoArredondado btn5;
+        private BotaoArredondado btn4;
+        private BotaoArredondado btnSoma;
+        private BotaoArredondado btn9;
+        private BotaoArredondado btn8;
+        private BotaoArredondado btn7;
+        private BotaoArredondado btnIgual;
+        private BotaoArredondado btnPonto;
+        private BotaoArredondado btn0;
+        private BotaoArredondado btnInversao;
+        private BotaoArredondado btnC;
         private Label lblHistorico;
     }
 }
