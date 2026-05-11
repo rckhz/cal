@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wfCalc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6069c522b15ae67255a3d652f5448f5565c04e0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3db94d80a5f45c06a981353786f98e47a573a732")]
 [assembly: System.Reflection.AssemblyProductAttribute("wfCalc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wfCalc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
