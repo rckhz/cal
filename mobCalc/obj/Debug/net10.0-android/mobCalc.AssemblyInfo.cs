@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mobCalc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+308949cef7643fa98f6d8c3a105da2261b3c874d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+250cafcdbd23d2bced39980a2a19c550345b820f")]
 [assembly: System.Reflection.AssemblyProductAttribute("mobCalc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mobCalc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

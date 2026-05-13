@@ -25,15 +25,12 @@ namespace mobCalc
                 {
                     lblDisplay.Text = texto;
                     _acabouDeCalcular = false;
+                    return;
                 }
                 if (lblDisplay.Text == "0")
-                {
                     lblDisplay.Text = texto;
-                }
                 else
-                {
                     lblDisplay.Text += texto;
-                }
             }
             // OPERADORES
             else if (texto == "+" || texto == "−" || texto == "×" || texto == "÷")
@@ -56,23 +53,22 @@ namespace mobCalc
             // IGUAL
             else if (texto == "=")
             {
-                // easter egg - antes do return
-                if (lblDisplay.Text == "3")
-                {
-                    lblDisplay.Text = "blassdadada";
-                    return;
-                }
-
                 if (lblDisplay.Text == "" || !_digitandoSegundo) return;
 
                 _model.Numero2 = double.Parse(lblDisplay.Text);
                 lblHistorico.Text = _model.Numero1 + " " + _model.Operador + " " + _model.Numero2 + " =";
                 _model.Calcular();
-                lblDisplay.Text = _model.Resultado.ToString();
-                lblHistorico.Text = lblDisplay.Text; // mostra o valor exato no histórico
+
+                double resultado = _model.Resultado;
+                lblDisplay.Text = resultado.ToString();
+
+                // guarda o resultado para próxima operação
+                _model = new CalculadoraModel();
+                _model.Numero1 = resultado;
+
                 _digitandoSegundo = false;
                 _acabouDeCalcular = true;
-                _model = new CalculadoraModel();
+                lblHistorico.Text = "";
             }
             // LIMPAR
             else if (texto == "AC")
@@ -87,36 +83,37 @@ namespace mobCalc
             else if (texto == "⌫")
             {
                 if (lblDisplay.Text.Length > 1)
-                {
                     lblDisplay.Text = lblDisplay.Text.Substring(0, lblDisplay.Text.Length - 1);
-                }
                 else
-                {
                     lblDisplay.Text = "0";
-                }
 
                 if (lblHistorico.Text.Length > 0)
-                {
                     lblHistorico.Text = lblHistorico.Text.Substring(0, lblHistorico.Text.Length - 1);
-                }
             }
             else if (texto == ".")
             {
                 if (!lblDisplay.Text.Contains("."))
                     lblDisplay.Text += ".";
             }
-
             else if (texto == "%" || texto == "+/-")
             {
-                if (lblDisplay.Text == "0") return;
+                if (lblDisplay.Text == "" || lblDisplay.Text == "0") return;
 
-                _model.Numero1 = double.Parse(lblDisplay.Text);
-                _model.TipoCalculo = texto == "%" ? "porcentagem" : "inverterSinal";
-                _model.CalcularEspecial();
-                lblDisplay.Text = _model.Resultado.ToString();
+                double numeroAtual = double.Parse(lblDisplay.Text);
+
+                if (texto == "+/-")
+                {
+                    lblDisplay.Text = (numeroAtual * -1).ToString();
+                    _acabouDeCalcular = false; // permite continuar editando
+                }
+                else
+                {
+                    _model.Numero1 = numeroAtual;
+                    _model.TipoCalculo = "porcentagem";
+                    _model.CalcularEspecial();
+                    lblDisplay.Text = _model.Resultado.ToString();
+                }
             }
-           
-
         }
     }
 }
